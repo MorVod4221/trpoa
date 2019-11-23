@@ -14,6 +14,29 @@ include_once('Aleshenko_Pavlov/pitu4_Exception.php');
 
 echo "Vvedite tri 4isla. \n";
 $perem = explode(" ", fgets(STDIN));
-
+//ÍÎÂÛÉ ÊÐÓÒÎÉ TRY CATCH
+try
+{
+	if (count($perem) != 3) 
+	{						
+		throw new pitu4_Exception("Ne tri 4isla. Poshel von.");
+	} 
+	else 
+	{
+		$a = (float)$perem[0];
+		$b = (float)$perem[1];
+		$c = (float)$perem[2];
+		
+	}
+	$square = new SquareEquation();
+	
+	MyLog::log("Korni yravneniya:" . implode(' ', $square->solve($a, $b, $c)));
+	
+	//MyLog::log(implode(",", $square->solve($a, $b, $c)));
+}
+catch (pitu4_Exception $e) 
+{
+	 echo $e->getMessage();
+}
 MyLog::write()."\n";
 ?>
