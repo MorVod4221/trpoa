@@ -1,6 +1,21 @@
 <?php
 
 class B{
+    
+    private $X;
+    protected $_a;
+    protected $_b;
+	
+    function task($a, $b){
+        //aX+b=0
+        
+        $x = ((-1 * $b) / $a);
+
+        $this -> $_a = $a;
+        $this -> $_b = $b;
+        return $this -> $X = $x;
+    }
+
 }
 
 class A extends B{
@@ -15,6 +30,19 @@ class A extends B{
         $this -> $a2 = $var2;
         $this -> $a3 = $var3;
         $this -> $a4 = $var4;
+    }
+
+    function sqrv($c){
+        //aX^2 + bx + c = 0;
+        $dis = (($_b * $_b) - 4 * $_a * $c);
+        if ($dis > 0){
+            $x1 = ((-1 * $_b) + (sqrt($dis)))/(2*$_a);
+            $x2 = ((-1 * $_b) + (sqrt($dis)))/(2*$_a);
+        } elseif ($dis == 0){
+            $x1 = (-1*$_b)/(2*$_a);
+        } elseif ($dis < 0){
+            echo "2 Мнимых корня";
+        }
     }
 }
 
