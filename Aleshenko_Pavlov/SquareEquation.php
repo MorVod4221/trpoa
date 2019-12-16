@@ -28,8 +28,6 @@ class SquareEquation extends Equation implements \core\EquationInterface
 		{
 			throw new pitu4_Exception("Diskriminant menshe nulya. Net resheniy \n");
 		}
-
-
 		$x1=((-$b+sqrt($this->dis))/(2*$a));
 		$x2=((-$b-sqrt($this->dis))/(2*$a));
 		return $this->x = array($x1, $x2);
