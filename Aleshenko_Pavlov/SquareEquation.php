@@ -1,7 +1,8 @@
 <?php
 namespace Aleshenko_Pavlov;
+use core;
 
-class SquareEquation extends Equation implements \core\EquationInterface
+class SquareEquation extends Equation implements core\EquationInterface
 {
 	protected $dis;
 	

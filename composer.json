@@ -1,0 +1,37 @@
+{
+    "name": "aero3511/trpo",
+    "description": "trpo composer file",
+    "authors": [
+        {
+            "name": "Pavel Aleschenko"
+        },
+        {
+            "name": "Alexandr Borisovich Pavlov"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "rok9ru/trpo-core",
+                "version": "master",
+                "source": {
+                    "url": "https://github.com/rok9ru/trpo-core",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+	"require":
+		{
+            "php":">=5.3.0",
+            "rok9ru/trpo-core" : "dev-master"
+        },
+    "autoload": {
+        "psr-4": {
+            "core\\": "vendor/rok9ru/trpo-core"
+        }
+    }
+
+}

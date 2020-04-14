@@ -1,7 +1,8 @@
 <?php
 namespace Aleshenko_Pavlov;
+use core;
 
-class MyLog extends \core\LogAbstract implements \core\LogInterface
+class MyLog extends core\LogAbstract implements core\LogInterface
 {
    	public static function log($str)
 	{
@@ -13,8 +14,9 @@ class MyLog extends \core\LogAbstract implements \core\LogInterface
 	   if (mkdir("log\\", 0700))
 	   {
 		$date = new \DateTime();
+		$dir_name = "log\/";
 		$resdate = $date -> format('Y-m-d\TH-i-s.u').".log";
-		file_put_contents("log\\".$resdate, implode("\n", $this->log), FILE_APPEND);
+		file_put_contents($dir_name.$resdate, implode("\n", $this->log), FILE_APPEND);
 		echo implode("\n", $this->log);
 	   } else die("Ошибка создания log каталога");
    }
