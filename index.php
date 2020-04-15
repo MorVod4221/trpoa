@@ -5,10 +5,10 @@ ini_set('display_errors', 1);
 error_reporting(-1);
 
 require_once('vendor/autoload.php');
-require_once('Aleshenko_Pavlov/myLog.php');
-require_once('Aleshenko_Pavlov/Equation.php');
-require_once('Aleshenko_Pavlov/SquareEquation.php');
-require_once('Aleshenko_Pavlov/pitu4_Exception.php');
+use Aleshenko_Pavlov\myLog;
+use Aleshenko_Pavlov\Equation;
+use Aleshenko_Pavlov\SquareEquation;
+use Aleshenko_Pavlov\pitu4_Exception;
 
 echo "Vvedite tri 4isla. \n";
 $perem = explode(" ", fgets(STDIN));

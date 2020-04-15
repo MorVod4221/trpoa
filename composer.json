@@ -21,6 +21,18 @@
                     "reference": "master"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "aleshenko_pavlov/lib",
+                "version": "master",
+                "source": {
+                    "url": "https://github.com/Aero3511/Aleshenko_Pavlov",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     ],
 	"require":
@@ -30,8 +42,9 @@
         },
     "autoload": {
         "psr-4": {
+            "Aleshenko_Pavlov\\": "vendor/aleshenko_pavlov/lib",
             "core\\": "vendor/rok9ru/trpo-core",
-            "PHPUnit_Framework_TestCase\\": "vendor/phpunit/phpunit/"
+            "PHPUnit\\": "vendor/phpunit/phpunit/src"
         },
         "classmap": [
             "vendor/"
