@@ -6,13 +6,13 @@ class SquareEquation extends Equation implements core\EquationInterface
 {
 	protected $dis;
 	
-	protected function diskr($a,$b,$c)
+	public function diskr($a,$b,$c)
 	{
 		$dis=$b*$b-4*$a*$c;
 		return $this->dis=$dis;
 	}
 	
-	function solve($a,$b,$c)
+	public function solve($a,$b,$c)
 	{
 		$this -> diskr($a, $b, $c);
 		
@@ -22,7 +22,6 @@ class SquareEquation extends Equation implements core\EquationInterface
 		}
 		if($this->dis==0)
 		{	
-			//MyLog::log("Diskriminant = 0; Otvet: \n");
 			return $this->x=array(-$b/(2*$a));
 		}
 		if($this->dis<0)

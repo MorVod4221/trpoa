@@ -30,8 +30,14 @@
         },
     "autoload": {
         "psr-4": {
-            "core\\": "vendor/rok9ru/trpo-core"
-        }
+            "core\\": "vendor/rok9ru/trpo-core",
+            "PHPUnit_Framework_TestCase\\": "vendor/phpunit/phpunit/"
+        },
+        "classmap": [
+            "vendor/"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
     }
-
 }
